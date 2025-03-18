@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_klik">
+   <children>
+      <TableView fx:id="tabela" layoutX="14.0" layoutY="14.0" prefHeight="436.0" prefWidth="712.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="pozoristeKolona" prefWidth="81.0" text="POZORISTE" />
+          <TableColumn fx:id="gradKolona" prefWidth="152.0" text="GRAD" />
+            <TableColumn fx:id="predstavaKolona" prefWidth="156.0" text="PREDSTAVA" />
+            <TableColumn fx:id="zanrKolona" prefWidth="56.0" text="ZANR" />
+            <TableColumn fx:id="datumKolona" prefWidth="136.0" text="DATUM IZVODJENJA" />
+            <TableColumn fx:id="cijenaKolona" prefWidth="65.0" text="CIJENA" />
+            <TableColumn fx:id="brojslMKolona" prefWidth="109.0" text="BROJ SLOBODNIH&#10;MJESTA" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

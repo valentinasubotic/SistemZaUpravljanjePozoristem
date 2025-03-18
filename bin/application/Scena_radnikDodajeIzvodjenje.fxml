@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="751.0" styleClass="izvodjenje" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_radnikDodajeIzvodjenje">
+   <children>
+      <Button layoutX="715.0" layoutY="6.0" mnemonicParsing="false" onAction="#switchToNakonPrijaveRadnika" style="-fx-background-color: #f73636; -fx-border-color: black;" text="X">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="72.0" layoutY="41.0" text="Spisak svih predstava, izaberite &#10;predstavu:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxPredstave" layoutX="72.0" layoutY="83.0" prefHeight="53.0" prefWidth="201.0" style="-fx-border-color: black;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ChoiceBox>
+      <Button layoutX="122.0" layoutY="153.0" mnemonicParsing="false" onAction="#potvrdaChoiceBoxPredstave" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: transparent; -fx-border-color: black;" text="POTVRDA">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="unesiCijenu" layoutX="376.0" layoutY="73.0" text="Unesite cijenu:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="unesiCijenuTf" layoutX="361.0" layoutY="110.0" prefHeight="25.0" prefWidth="120.0" promptText="cijena" />
+      <Label fx:id="ispisPorukuOCijeni" layoutX="298.0" layoutY="71.0" text="Label&#10;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datum" layoutX="542.0" layoutY="79.0" promptText="datum">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <Label fx:id="datumLabel" layoutX="578.0" layoutY="51.0" text="Izaberite datum:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonDodaj" layoutX="497.0" layoutY="422.0" mnemonicParsing="false" onAction="#dodajIzvodjenje" style="-fx-background-color: transparent; -fx-border-color: white;" text="DODAJTE IZVODJENJE PREDSTAVE" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="unesiteSatLabela" layoutX="579.0" layoutY="113.0" text="Unesite sat:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hh" layoutX="535.0" layoutY="141.0" prefHeight="25.0" prefWidth="36.0" promptText="hh" />
+      <TextField fx:id="mm" layoutX="598.0" layoutY="141.0" prefHeight="25.0" prefWidth="36.0" promptText="mm" />
+      <TextField fx:id="ss" layoutX="663.0" layoutY="141.0" prefHeight="25.0" prefWidth="36.0" promptText="ss" />
+      <Label fx:id="dvotacka" layoutX="579.0" layoutY="143.0" prefHeight="21.0" prefWidth="6.0" text=":">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="dvotacka1" layoutX="644.0" layoutY="143.0" prefHeight="21.0" prefWidth="6.0" text=":">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

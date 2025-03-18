@@ -1,0 +1,79 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.bodybg{
+	-fx-background-image : url("/application/pozoriste.jpg");
+	-fx-background-size: 100% 100%; 
+}
+
+.login{
+	-fx-background-image : url("/application/login.jpg");
+	-fx-background-size: 100% 100%; 
+}
+.image{
+	-fx-border-radius : 10 10 10 10 ;
+}
+.imageflag{
+	-fx-background-image : url("/application/flag1.jpg");
+	-fx-background-size: 100% 100%;
+}
+.imagemasks{
+		-fx-background-image : url("/application/masks1.png");
+		-fx-background-size: 100% 100%;
+}
+.radnik{
+		-fx-background-image : url("/application/radnik3.png");
+		-fx-background-size: 100% 100%;
+}
+.radnikKreiraRadnika{
+		-fx-background-image : url("/application/radnikRegistrujeRadnika3.png");
+		-fx-background-size: 100% 100%;
+}
+.radnikKreiraPozoriste{
+		-fx-background-image : url("/application/poz.png");
+		-fx-background-size: 100% 100%;
+}
+.radnikDodajePredstavu{
+		-fx-background-image : url("/application/predstava1.jpg");
+		-fx-background-size: 100% 100%;
+}
+.radnikDodaje{
+		-fx-background-image : url("/application/radnikDodaje.jpg");
+		-fx-background-size: 100% 100%;
+}
+
+.posj{
+		-fx-background-image : url("/application/posj1.jpg");
+		-fx-background-size: 100% 100%;
+}
+.izaberite{
+	-fx-background-image : url("/application/izaberite.jpg");
+		-fx-background-size: 100% 100%;
+}
+.otkazivanje{
+	-fx-background-image : url("/application/otkazivanje.png");
+		-fx-background-size: 100% 100%;
+}
+.pregledd{
+	-fx-background-image : url("/application/pregledd.png");
+		-fx-background-size: 100% 100%;
+}
+.izvodjenje{
+	-fx-background-image : url("/application/izvodjene.png");
+		-fx-background-size: 100% 100%;
+}
+.blagajna{
+	-fx-background-image : url("/application/blagajna.png");
+		-fx-background-size: 100% 100%;
+}
+.prodaja{
+	-fx-background-image : url("/application/prodaja.png");
+		-fx-background-size: 100% 100%;
+}
+.otkazRadnik{
+	-fx-background-image : url("/application/otkaz1.jpg");
+		-fx-background-size: 100% 100%;
+}
+.predaja{
+		-fx-background-image : url("/application/predaja.png");
+		-fx-background-size: 100% 100%;
+}

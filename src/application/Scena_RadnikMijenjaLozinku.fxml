@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="600.0" style="-fx-background-color: #127bc9;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_radnikMijenjaLozinku">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../promjenaL.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="105.0" layoutY="232.0" text="Trenutna lozinka: ">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tf_trenutna" layoutX="313.0" layoutY="228.0" prefHeight="30.0" prefWidth="159.0" />
+      <Label layoutX="105.0" layoutY="296.0" text="Nova lozinka:">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tf_nova" layoutX="313.0" layoutY="293.0" prefHeight="30.0" prefWidth="159.0" />
+      <Button layoutX="313.0" layoutY="365.0" mnemonicParsing="false" onAction="#potvrdaPromjeneLozinke" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: white;" text="POTVRDA">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="556.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToNakonPrijaveRadnika" style="-fx-background-color: white;" text="X">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

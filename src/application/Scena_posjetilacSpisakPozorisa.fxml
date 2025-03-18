@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="968.0" styleClass="izaberite" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_posjetilacSpisakPozorista">
+   <children>
+      <Label layoutX="107.0" layoutY="39.0" prefHeight="35.0" prefWidth="189.0" text="IZABERITE POZORIŠTE" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listaPozoriste" layoutX="98.0" layoutY="74.0" prefHeight="200.0" prefWidth="208.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <Button layoutX="925.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToNakonPrijavePosjetioca" style="-fx-background-color: #f73636; -fx-border-color: black;" text="X">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="116.0" layoutY="283.0" mnemonicParsing="false" onAction="#potvrdaPozorista" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="POTVRDITE IZBOR" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="labela1" layoutX="356.0" layoutY="112.0" prefHeight="79.0" prefWidth="189.0" text="IZABERITE PREDSTAVU &#10;KOJA ĆE BITI IZVEDENA &#10;U NAREDNOM PERIODU &#10;U " textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="labela" layoutX="381.0" layoutY="166.0" prefHeight="16.0" prefWidth="159.0" text="label" textFill="WHITE" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="168.0">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <ChoiceBox fx:id="cbListaPredstava" layoutX="603.0" layoutY="129.0" prefHeight="45.0" prefWidth="199.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <Button fx:id="buttonPotvrdaPredstava" layoutX="428.0" layoutY="218.0" mnemonicParsing="false" onAction="#potvrdaPredstava" prefHeight="65.0" prefWidth="235.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="POTVRDITE IZBOR I&#10;POGLEDAJTE DODATNE &#10;INFORMACIJE O PREDSTAVI&#10; &#10;" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="nestani" layoutX="44.0" layoutY="332.0" text="Glumci predstave" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="predstavinoIme" layoutX="44.0" layoutY="348.0" prefHeight="17.0" prefWidth="171.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxGlumci" layoutX="40.0" layoutY="371.0" prefHeight="25.0" prefWidth="183.0" />
+      <CheckBox fx:id="checkBoxGlumac" layoutX="27.0" layoutY="433.0" mnemonicParsing="false" onAction="#prikaziPredstaveGlumca" text="Informacije o izabranom glumcu" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <Label fx:id="nestani1" layoutX="28.0" layoutY="462.0" text="Spisak predstava u kojima je glumio" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani2" layoutX="286.0" layoutY="332.0" text="Reziser predstave" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="predstavinoIme1" layoutX="287.0" layoutY="348.0" prefHeight="17.0" prefWidth="148.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="imeRezisera" layoutX="287.0" layoutY="371.0" prefHeight="25.0" prefWidth="126.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkBoxReziser" layoutX="285.0" layoutY="426.0" mnemonicParsing="false" onAction="#prikaziPredstaveRezisera" text="Prikazi informacije o &#10;reziseru" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <ListView fx:id="listaReziserPredstava" layoutX="270.0" layoutY="482.0" prefHeight="200.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <Label fx:id="nestani4" layoutX="504.0" layoutY="332.0" text="Autor predstave" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="predstavinoIme11" layoutX="504.0" layoutY="348.0" prefHeight="17.0" prefWidth="148.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="imeAutora" layoutX="504.0" layoutY="371.0" prefHeight="25.0" prefWidth="126.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkBoxAutor" layoutX="508.0" layoutY="426.0" mnemonicParsing="false" onAction="#prikaziPredstaveAutora" text="Prikazi informacije o &#10;autoru" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+      <ListView fx:id="listaAutorPredstava" layoutX="489.0" layoutY="482.0" prefHeight="200.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <ListView fx:id="listaGlumciPredstave" layoutX="40.0" layoutY="482.0" prefHeight="200.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <Label fx:id="nestani3" layoutX="266.0" layoutY="462.0" text="Spisak predstava koje je rezisirao" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani5" layoutX="489.0" layoutY="462.0" text="Spisak predstava koje je scenarisao" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani6" layoutX="714.0" layoutY="191.0" text="Informacije o predstavi:" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="imePredstave1" layoutX="855.0" layoutY="191.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani7" layoutX="714.0" layoutY="210.0" text="u pozorištu:" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="imePozorista" layoutX="788.0" layoutY="210.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani8" layoutX="738.0" layoutY="241.0" prefHeight="19.0" prefWidth="44.0" text="Zanr:" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="zanrLabela" layoutX="788.0" layoutY="241.0" style="-fx-font-weight: bold;" text="zanrLabela" textFill="WHITE" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani9" layoutX="734.0" layoutY="266.0" text="Cijena" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="cijenaLabela" layoutX="807.0" layoutY="267.0" style="-fx-font-weight: bold;" text="Label" textFill="WHITE" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani10" layoutX="714.0" layoutY="292.0" text="Pogledajte, a zatim izaberite &#10;termin izvodjenja predstave" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxTermini" layoutX="718.0" layoutY="344.0" prefHeight="25.0" prefWidth="159.0" />
+      <Label fx:id="nestani11" layoutX="716.0" layoutY="454.0" prefHeight="65.0" prefWidth="204.0" text="Pogledajte sva izvodjenja predstave&#10;u svim ostalim pozoristima,&#10;klikom na digme" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="klikButton" layoutX="820.0" layoutY="498.0" mnemonicParsing="false" onAction="#KlikScena" style="-fx-border-radius: 160; -fx-border-color: white; -fx-background-color: transparent;" text="KLIK" textFill="WHITE" />
+      <CheckBox fx:id="checkBoxBrojKarata" layoutX="724.0" layoutY="388.0" mnemonicParsing="false" onAction="#prikaziBrojSlobodnihKarata" text="Prikazi broj slobodnih karata" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </CheckBox>
+      <Label fx:id="labelaBrojKarata" layoutX="789.0" layoutY="417.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="nestani12" layoutX="726.0" layoutY="539.0" text="Unesite broj potrebnih karata:" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldBrojKarata" layoutX="750.0" layoutY="570.0" prefHeight="25.0" prefWidth="109.0" promptText="broj karata" />
+      <Button fx:id="potvrdaRezervacije" layoutX="695.0" layoutY="605.0" mnemonicParsing="false" onAction="#potvrdaRezervacije" prefHeight="35.0" prefWidth="225.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="POTVRDITE REZERVACIJU" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="nemaslkarata" layoutX="788.0" layoutY="434.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

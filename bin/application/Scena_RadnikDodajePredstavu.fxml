@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="840.0" styleClass="radnikDodajePredstavu" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_radnikDodajePredstavu">
+   <children>
+      <Label layoutX="251.0" layoutY="43.0" prefHeight="23.0" prefWidth="339.0" text="UNESITE PODATKE O PREDSTAVI:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="791.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToNakonPrijaveRadnika" style="-fx-background-color: #f73636; -fx-border-color: black;" text="X">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <HBox layoutX="206.0" layoutY="82.0" prefHeight="50.0" prefWidth="417.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="190.0" text="Unesite naziv predstave :" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" top="22.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tf_naziv" prefHeight="35.0" prefWidth="155.0" promptText="naziv" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white; -fx-border-width: 0 0 1 0;">
+               <HBox.margin>
+                  <Insets left="22.0" top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="207.0" layoutY="125.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="190.0" text="Izaberite zanr predstave:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" top="22.0" />
+               </HBox.margin>
+            </Label>
+            <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="155.0">
+               <HBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </HBox.margin>
+            </ChoiceBox>
+         </children>
+      </HBox>
+      <Label layoutX="109.0" layoutY="182.0" text="Izaberite glumce: " textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="71.0" layoutY="428.0" mnemonicParsing="false" onAction="#dodajNovogGlumca" prefHeight="32.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Dodajte novog glumca" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="358.0" layoutY="182.0" text="Izaberite autora:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listaGlumci" layoutX="71.0" layoutY="207.0" prefHeight="211.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <ListView fx:id="listaAutori" layoutX="302.0" layoutY="207.0" prefHeight="211.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <Button layoutX="302.0" layoutY="428.0" mnemonicParsing="false" onAction="#dodajNovogAutora" prefHeight="32.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Dodajte novog autora" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="579.0" layoutY="182.0" text="Izaberite rezisera:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listaReziseri" layoutX="540.0" layoutY="207.0" prefHeight="211.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white;" />
+      <Button layoutX="540.0" layoutY="428.0" mnemonicParsing="false" onAction="#dodajNovogRezisera" prefHeight="32.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Dodajte novog rezisera" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button_dodajPredstavu" layoutX="302.0" layoutY="606.0" mnemonicParsing="false" onAction="#dodajPredstavu" prefHeight="32.0" prefWidth="201.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="DODAJ PREDSTAVU" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="labelime" layoutX="118.0" layoutY="468.0" text="UNESITE IME:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_imeGlumca" layoutX="99.0" layoutY="488.0" prefHeight="29.0" prefWidth="145.0" promptText="ime" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white; -fx-border-width: 0 0 1 0;" />
+      <Label fx:id="labelprezime" layoutX="96.0" layoutY="517.0" text="UNESITE PREZIME:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_prezimeGlumca" layoutX="99.0" layoutY="537.0" prefHeight="29.0" prefWidth="145.0" promptText="prezime" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white; -fx-border-width: 0 0 1 0;" />
+      <Button fx:id="buttonDodajGlumca" layoutX="99.0" layoutY="572.0" mnemonicParsing="false" onAction="#dodajGlumca" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="DODAJ" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="labelimeA" layoutX="349.0" layoutY="468.0" text="UNESITE IME:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_imeAutora" layoutX="330.0" layoutY="488.0" prefHeight="29.0" prefWidth="145.0" promptText="ime" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white; -fx-border-width: 0 0 1 0;" />
+      <Label fx:id="labelprezimeA" layoutX="328.0" layoutY="517.0" text="UNESITE PREZIME:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_prezimeAutora" layoutX="330.0" layoutY="537.0" prefHeight="29.0" prefWidth="145.0" promptText="prezime" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white; -fx-border-width: 0 0 1 0;" />
+      <Button fx:id="buttonDodajAutora" layoutX="331.0" layoutY="572.0" mnemonicParsing="false" onAction="#dodajAutora" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="DODAJ" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="labelimeR" layoutX="587.0" layoutY="468.0" text="UNESITE IME:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_imeRezisera" layoutX="568.0" layoutY="488.0" prefHeight="29.0" prefWidth="145.0" promptText="ime" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white; -fx-border-width: 0 0 1 0;" />
+      <Label fx:id="labelprezimeR" layoutX="566.0" layoutY="517.0" text="UNESITE PREZIME:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_prezimeRezisera" layoutX="568.0" layoutY="537.0" prefHeight="29.0" prefWidth="145.0" promptText="prezime" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white; -fx-border-width: 0 0 1 0;" />
+      <Button fx:id="buttonDodajRezisera" layoutX="568.0" layoutY="572.0" mnemonicParsing="false" onAction="#dodajRezisera" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="DODAJ" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

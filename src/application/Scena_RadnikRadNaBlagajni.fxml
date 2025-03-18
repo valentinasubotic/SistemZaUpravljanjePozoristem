@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="793.0" styleClass="blagajna" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_radnikRadNaBlagajni">
+   <children>
+      <Button layoutX="602.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToNakonPrijaveRadnika" style="-fx-background-color: #f7c336; -fx-border-color: black;" text="X" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="185.0" layoutY="368.0" mnemonicParsing="false" onAction="#prodaja" style="-fx-border-color: black; -fx-background-color: #f7c336;" text="Prodaja karte posjetiocu, koji nije rezervisao karte" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="185.0" layoutY="413.0" mnemonicParsing="false" onAction="#predaja" prefHeight="33.0" prefWidth="349.0" style="-fx-border-color: black; -fx-background-color: #f7c336;" text="Predaja karte posjetiocu, koji je rezervisao karte" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="185.0" layoutY="458.0" mnemonicParsing="false" onAction="#otkazivanje" prefHeight="33.0" prefWidth="349.0" style="-fx-border-color: black; -fx-background-color: #f7c336;" text="Otkazivanje rezervisanih karata" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

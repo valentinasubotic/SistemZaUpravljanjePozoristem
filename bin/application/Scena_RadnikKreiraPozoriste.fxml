@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="655.0" styleClass="radnikKreiraPozoriste" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_radnikKreiraPozoriste">
+   <children>
+      <Label layoutX="159.0" layoutY="38.0" prefHeight="23.0" prefWidth="339.0" text="UNESITE PODATKE O POZORIŠTU:" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="603.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToNakonPrijaveRadnika" style="-fx-background-color: #f73636; -fx-border-color: black;" text="X">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <HBox layoutX="130.0" layoutY="160.0" prefHeight="50.0" prefWidth="396.0">
+         <children>
+            <Label text="Unesite naziv:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" top="22.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tf_naziv" prefHeight="35.0" prefWidth="155.0" promptText="naziv" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;">
+               <HBox.margin>
+                  <Insets left="50.0" top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="130.0" layoutY="218.0" prefHeight="50.0" prefWidth="396.0">
+         <children>
+            <Label text="Unesite grad:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" top="22.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tf_grad" prefHeight="35.0" prefWidth="155.0" promptText="grad" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;">
+               <HBox.margin>
+                  <Insets left="55.0" top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="123.0" layoutY="276.0" prefHeight="50.0" prefWidth="396.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="156.0" text="Unesite broj sjedista:" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="22.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tf_brSjedista" prefHeight="35.0" prefWidth="155.0" promptText="broj sjedista" style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;">
+               <HBox.margin>
+                  <Insets left="22.0" top="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="button_kreirajte" layoutX="265.0" layoutY="351.0" mnemonicParsing="false" onAction="#kreirajte" style="-fx-background-color: transparent; -fx-border-color: white;" text="KREIRAJTE" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
